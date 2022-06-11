@@ -1,7 +1,7 @@
 ---
 title: "WUP_04"
-author: "Put your name here!"
-date: "fall 2020"
+author: "Thelma means!"
+date: "summer 2022"
 output:
   html_document:
     df_print: paged
@@ -22,11 +22,17 @@ The data is in the file GSScsv.csv and came from the 2018 General Social Survey.
 $H_0$ There is no difference between the average score on the WORDSUM test and level of schooling DEGREE  
 $H_a$ There is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE  
 
+```{r}
+gss=read.csv("GSScsv.csv")
+```
+
+
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-# Results
+
+WORDSUM is numerical,DEGREE is categorical.wordsum is explained by category. used the numerical categorical file.
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
@@ -35,6 +41,13 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+boxplot(WORDSUM~DEGREE,data=gss)
+```
+    
+  from the plot the Graduate appears to do better than the less than high school and does better than high school.
+
 
 ### Numerical Descriptive Results
 
